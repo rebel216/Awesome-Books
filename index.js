@@ -34,8 +34,8 @@ function getBook() {
   const Title = document.getElementById('bookTitle').value;
   const Author = document.getElementById('bookAuthor').value;
   const book = new Book(Title, Author);
-  Title.value = '';
-  Author.value = '';
+  document.getElementById('bookTitle').value = '';
+  document.getElementById('bookAuthor').value = '';
   return book;
 }
 
