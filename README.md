@@ -1,18 +1,17 @@
 Portfolio to Microverse course
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Portfolio Microverse
+# Awesome Book-List Microverse
 
-> Capstone Project-1 using HTML, CSS, JavaScript
+>Awesome Book-List using HTML, CSS, JavaScript
 
-### Check out in this [link](https://rebel216.github.io/Capstone-Project-1/)
+### Check out in this [link]()
 
 
 
 ## Acknowledgements
 
-Credit to Cindy Shin, the author of the original design, `Creative Commons License`.
-Original design idea by Cindy Shin in Behance.
+
 
 ## Built With
 
@@ -28,7 +27,7 @@ To get a local copy up follow these simple example steps.
 
 ### Setup
 
-Open a terminal or a git bash in the desired directory and run `https://github.com/rebel216/Capstone-Project-1`
+Open a terminal or a git bash in the desired directory and run 
 
 👤 **Author1**
 
