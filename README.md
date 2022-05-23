@@ -5,7 +5,7 @@ Portfolio to Microverse course
 
 >Awesome Book-List using HTML, CSS, JavaScript
 
-### Check out in this [link]()
+### Check out in this [link](https://rebel216.github.io/Awesome-Books/)
 
 
 
@@ -27,7 +27,7 @@ To get a local copy up follow these simple example steps.
 
 ### Setup
 
-Open a terminal or a git bash in the desired directory and run 
+
 
 👤 **Author1**
 
