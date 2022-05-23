@@ -1,73 +1,70 @@
 .heading {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 body {
-    height: 98vh;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 98vh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .bookTitle .bookAuthor {
-    justify-content: center;
-    display: flex;
-    text-align: center;
-    padding: 20px;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  padding: 20px;
 }
 
 .addBooks {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    place-items: center;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
 }
 
 .booksList {
-    display: flex;
-    border-radius: 8px;
-    margin: 0 auto 20px auto;
-
+  display: flex;
+  border-radius: 8px;
+  margin: 0 auto 20px auto;
 }
 
 .list {
-    display: flex;
-    justify-content: space-between;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  padding: 20px;
 }
 
 .list button {
-    margin-right: 30%;
-    margin-top: 15px;
-    width: 100px;
-    height: 40px;
-    justify-content: center;
+  margin-right: 30%;
+  margin-top: 15px;
+  width: 100px;
+  height: 40px;
+  justify-content: center;
 }
 
 .list p {
-    display: flex;
-    height: 30%;
-    width: 30%;
-    justify-content: center;
-    text-align: center;
-    margin-left: 30%;
-    font-weight: 100px;
+  display: flex;
+  height: 30%;
+  width: 30%;
+  justify-content: center;
+  text-align: center;
+  margin-left: 30%;
+  font-weight: 100;
 }
-

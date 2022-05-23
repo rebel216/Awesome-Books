@@ -9,12 +9,14 @@ class BookList {
 
   addbook(book) {
     this.data.push(book);
+    localStorage.setItem('bookdata', JSON.stringify(this.data));
   }
 
   removeBook(id) {
     const book = document.getElementById(id);
     book.remove();
     this.data = this.data.filter((bookObj) => bookObj.id !== id);
+    localStorage.setItem('bookdata', JSON.stringify(this.data));
   }
 }
 
@@ -56,3 +58,13 @@ AddBooks.addEventListener('submit', (e) => {
   CreateUIBookList(newbook);
   e.preventDefault();
 });
+
+window.onload = () => {
+  booklist.data = JSON.parse(localStorage.getItem('bookdata' || '[]'));
+  if (booklist.data === null) {
+    booklist.data = [];
+    return;
+  }
+
+  booklist.data.forEach((book) => CreateUIBookList(book));
+};
