@@ -6,7 +6,6 @@ let BookList = [];
 
 function addbook(book) {
   // this.data.push(book);
-  BookList = JSON.parse(localStorage.getItem('bookdata' || '[]'));
   BookList.push(book);
   localStorage.setItem('bookdata', JSON.stringify(BookList || '[]'));
 }
@@ -38,8 +37,10 @@ function CreateUIBookList(bookOBJ) {
   deleteBook.addEventListener('click', () => {
     const book = document.getElementById(bookOBJ.id);
     book.remove();
-    BookList = BookList.filter((bookOj) => bookOBJ.id !== bookOj.id);
+    console.log(BookList);
+    BookList = BookList.filter((book) => book.id !== bookOBJ.id);
     localStorage.setItem('bookdata', JSON.stringify(BookList));
+    console.log(BookList);
   });
   bookList.appendChild(deleteBook);
   BookListUi.appendChild(bookList);
@@ -52,11 +53,11 @@ AddBooks.addEventListener('click', () => {
 });
 
 window.onload = () => {
-  let bookl = JSON.parse(localStorage.getItem('bookdata' || '[]'));
+  const bookl = JSON.parse(localStorage.getItem('bookdata' || '[]'));
   if (bookl === null) {
-    bookl = [];
     return;
   }
+  localStorage.setItem('bookdata', JSON.stringify(bookl));
   for (let i = 0; i < bookl.length; i += 1) {
     CreateUIBookList(bookl[i]);
   }
