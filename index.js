@@ -18,14 +18,14 @@ const initialData = [
   },
 ];
 // window.localStorage.removeItem('bookdata');
-const AddBooks = document.getElementById('addBook-btn');
+const addBooks = document.getElementById('addBook-btn');
 
 let BookList = [];
 
-function addbook(book) {
+function addBook(book) {
   // this.data.push(book);
   BookList.push(book);
-  localStorage.setItem('bookdata', JSON.stringify(BookList || '[]'));
+  localStorage.setItem('bookData', JSON.stringify(BookList || '[]'));
 }
 
 function Book(Title, Author) {
@@ -45,7 +45,7 @@ function getBook() {
 }
 
 function CreateUIBookList(bookOBJ) {
-  const BookListUi = document.getElementById('Book-List');
+  const BookListUi = document.getElementById('book-list');
   const bookList = document.createElement('div');
   bookList.classList.add('list');
   bookList.setAttribute('id', bookOBJ.id);
@@ -57,25 +57,25 @@ function CreateUIBookList(bookOBJ) {
     book.remove();
     console.log(BookList);
     BookList = BookList.filter((book) => book.id !== bookOBJ.id);
-    localStorage.setItem('bookdata', JSON.stringify(BookList));
+    localStorage.setItem('bookData', JSON.stringify(BookList));
     console.log(BookList);
   });
   bookList.appendChild(deleteBook);
   BookListUi.appendChild(bookList);
 }
 
-AddBooks.addEventListener('click', () => {
-  const newbook = getBook();
-  addbook(newbook);
-  CreateUIBookList(newbook);
+addBooks.addEventListener('click', () => {
+  const newBook = getBook();
+  addBook(newBook);
+  CreateUIBookList(newBook);
 });
 
 window.onload = () => {
-  const bookl = JSON.parse(localStorage.getItem('bookdata' || '[]'));
+  const bookl = JSON.parse(localStorage.getItem('bookData' || '[]'));
   if (bookl === null) {
-    localStorage.setItem('bookdata', JSON.stringify(initialData));
+    localStorage.setItem('bookData', JSON.stringify(initialData));
   }
-  localStorage.setItem('bookdata', JSON.stringify(bookl));
+  localStorage.setItem('bookData', JSON.stringify(bookl));
   for (let i = 0; i < bookl.length; i += 1) {
     CreateUIBookList(bookl[i]);
   }
