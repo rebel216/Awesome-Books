@@ -15,7 +15,6 @@ const initialData = [
     Author: 'Ofelia Lockless',
   },
 ];
-// window.localStorage.removeItem('bookData');
 const addBooks = document.getElementById('addBook-btn');
 
 let BookList = [];
@@ -51,10 +50,8 @@ function CreateUIBookList(bookOBJ) {
   deleteBook.addEventListener('click', () => {
     const book = document.getElementById(bookOBJ.id);
     book.remove();
-    console.log(BookList);
     BookList = BookList.filter((book) => book.id !== bookOBJ.id);
     localStorage.setItem('bookData', JSON.stringify(BookList));
-    console.log(BookList);
   });
   bookList.appendChild(deleteBook);
   BookListUi.appendChild(bookList);
