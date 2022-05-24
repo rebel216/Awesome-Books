@@ -2,37 +2,37 @@
 
 const AddBooks = document.getElementById('addBooks');
 
-class BookList {
-  constructor() {
-    this.data = [];
-  }
+// class BookList {
+//   constructor() {
+//     this.data = [];
+//   }
+let BookList = [];
 
-  addbook(book) {
-    this.data.push(book);
-    localStorage.setItem('bookdata', JSON.stringify(this.data));
-  }
-
-  removeBook(id) {
-    const book = document.getElementById(id);
-    book.remove();
-    this.data = this.data.filter((bookObj) => bookObj.id !== id);
-    localStorage.setItem('bookdata', JSON.stringify(this.data));
-  }
+function addbook(book) {
+  // this.data.push(book);
+  BookList.push(book);
+  localStorage.setItem('bookdata', JSON.stringify(BookList || '[]'));
 }
 
-class Book {
-  constructor(Title, Author) {
-    this.Title = Title;
-    this.Author = Author;
-    this.id = Math.random();
-  }
+// class Book {
+//   constructor(Title, Author) {
+//     this.Title = Title;
+//     this.Author = Author;
+//     this.id = Math.random();
+//   }
+// }
+function Book(Title, Author) {
+  this.Title = Title;
+  this.Author = Author;
+  this.id = Math.random();
 }
 
-const booklist = new BookList();
+// const booklist = new BookList();
 
 function getBook() {
   const Title = document.getElementById('bookTitle').value;
   const Author = document.getElementById('bookAuthor').value;
+  // const book = new Book(Title, Author);
   const book = new Book(Title, Author);
   document.getElementById('bookTitle').value = '';
   document.getElementById('bookAuthor').value = '';
@@ -47,24 +47,28 @@ function CreateUIBookList(bookOBJ) {
   bookList.innerHTML = `<p>${bookOBJ.Title} <br/> by ${bookOBJ.Author}</p>`;
   const deleteBook = document.createElement('button');
   deleteBook.innerHTML = 'Remove';
-  deleteBook.addEventListener('click', () => booklist.removeBook(bookOBJ.id));
+  deleteBook.addEventListener('click', () => {
+    const book = document.getElementById(bookOBJ.id);
+    book.remove();
+    BookList = BookList.filter((bookOj) => bookOj.id !== bookOBJ.id);
+    localStorage.setItem('bookdata', JSON.stringify(BookList));
+  });
   bookList.appendChild(deleteBook);
   BookListUi.appendChild(bookList);
 }
 
 AddBooks.addEventListener('submit', (e) => {
   const newbook = getBook();
-  booklist.addbook(newbook);
+  addbook(newbook);
   CreateUIBookList(newbook);
   e.preventDefault();
 });
 
 window.onload = () => {
-  booklist.data = JSON.parse(localStorage.getItem('bookdata' || '[]'));
-  if (booklist.data === null) {
-    booklist.data = [];
+  const bookl = JSON.parse(localStorage.getItem('bookdata' || '[]'));
+  if (BookList === null) {
     return;
   }
-
-  booklist.data.forEach((book) => CreateUIBookList(book));
+  console.log(bookl);
+  BookList.foreach((book) => CreateUIBookList(book));
 };
