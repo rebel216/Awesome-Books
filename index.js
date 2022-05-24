@@ -2,10 +2,6 @@
 
 const AddBooks = document.getElementById('addBook-btn');
 
-// class BookList {
-//   constructor() {
-//     this.data = [];
-//   }
 let BookList = [];
 
 function addbook(book) {
@@ -15,20 +11,11 @@ function addbook(book) {
   localStorage.setItem('bookdata', JSON.stringify(BookList || '[]'));
 }
 
-// class Book {
-//   constructor(Title, Author) {
-//     this.Title = Title;
-//     this.Author = Author;
-//     this.id = Math.random();
-//   }
-// }
 function Book(Title, Author) {
   this.Title = Title;
   this.Author = Author;
   this.id = Math.random();
 }
-
-// const booklist = new BookList();
 
 function getBook() {
   const Title = document.getElementById('bookTitle').value;
@@ -62,7 +49,6 @@ AddBooks.addEventListener('click', () => {
   const newbook = getBook();
   addbook(newbook);
   CreateUIBookList(newbook);
-  // e.preventDefault();
 });
 
 window.onload = () => {
@@ -71,7 +57,6 @@ window.onload = () => {
     bookl = [];
     return;
   }
-  console.log(bookl);
   for (let i = 0; i < bookl.length; i += 1) {
     CreateUIBookList(bookl[i]);
   }
