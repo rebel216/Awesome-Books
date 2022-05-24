@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Awesome Books " />
+    <title>Awesome Books</title>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Awesome Books ">
-        <title>Awesome Books</title>
-        
-    </head>
-
-    <body>
-        <header class="heading">
-            <h1>Awesome books</h1>
-        </header>
-        <div class="book-collection" >
-            <ul id="book-list"></ul>
-        </div>
-        <div class="addBooks" id="addBooks">
-            <input type="text" id="bookTitle" class="bookTitle" placeholder="Titile" required>
-            <input type="text" id="bookAuthor" class="bookAuthor" placeholder="Author" required>
-            <button  id="addBook-btn">Add</button>
-        </div>
-        <script src="index.js" ></script>
-    </body>
-
+  <body>
+    <header class="heading">
+      <h1>Awesome books</h1>
+    </header>
+    <div class="book-collection">
+      <ul id="book-list"></ul>
+    </div>
+    <div class="addBooks" id="addBooks">
+      <form action="/" method="post">
+        <input
+          type="text"
+          id="bookTitle"
+          class="bookTitle"
+          placeholder="Title"
+          required
+        />
+        <input
+          type="text"
+          id="bookAuthor"
+          class="bookAuthor"
+          placeholder="Author"
+          required
+        />
+        <input type="submit" value="Add" id="addBook-btn" />
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>

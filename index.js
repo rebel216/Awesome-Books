@@ -1,5 +1,3 @@
-/* eslint-disable max-classes-per-file */
-
 const initialData = [
   {
     id: '176543',
@@ -17,13 +15,12 @@ const initialData = [
     Author: 'Ofelia Lockless',
   },
 ];
-// window.localStorage.removeItem('bookdata');
+// window.localStorage.removeItem('bookData');
 const addBooks = document.getElementById('addBook-btn');
 
 let BookList = [];
 
 function addBook(book) {
-  // this.data.push(book);
   BookList.push(book);
   localStorage.setItem('bookData', JSON.stringify(BookList || '[]'));
 }
@@ -37,7 +34,6 @@ function Book(Title, Author) {
 function getBook() {
   const Title = document.getElementById('bookTitle').value;
   const Author = document.getElementById('bookAuthor').value;
-  // const book = new Book(Title, Author);
   const book = new Book(Title, Author);
   document.getElementById('bookTitle').value = '';
   document.getElementById('bookAuthor').value = '';
@@ -71,12 +67,12 @@ addBooks.addEventListener('click', () => {
 });
 
 window.onload = () => {
-  const bookl = JSON.parse(localStorage.getItem('bookData' || '[]'));
-  if (bookl === null) {
+  const bookList = JSON.parse(localStorage.getItem('bookData' || '[]'));
+  if (bookList === null) {
     localStorage.setItem('bookData', JSON.stringify(initialData));
   }
-  localStorage.setItem('bookData', JSON.stringify(bookl));
-  for (let i = 0; i < bookl.length; i += 1) {
-    CreateUIBookList(bookl[i]);
+  localStorage.setItem('bookData', JSON.stringify(bookList));
+  for (let i = 0; i < bookList.length; i += 1) {
+    CreateUIBookList(bookList[i]);
   }
 };
