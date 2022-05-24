@@ -38,7 +38,7 @@ function CreateUIBookList(bookOBJ) {
   deleteBook.addEventListener('click', () => {
     const book = document.getElementById(bookOBJ.id);
     book.remove();
-    BookList = BookList.filter((bookOj) => bookOj.id !== bookOBJ.id);
+    BookList = BookList.filter((bookOj) => bookOBJ.id !== bookOj.id);
     localStorage.setItem('bookdata', JSON.stringify(BookList));
   });
   bookList.appendChild(deleteBook);
