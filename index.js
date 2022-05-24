@@ -1,5 +1,23 @@
 /* eslint-disable max-classes-per-file */
 
+const initialData = [
+  {
+    id: '176543',
+    Title: "Santa's Apprentice",
+    Author: 'Nicolle Plackstone',
+  },
+  {
+    id: '223244556',
+    Title: 'History Is Made at Night',
+    Author: 'Eduard Ekell',
+  },
+  {
+    id: '3324',
+    Title: 'Hercules',
+    Author: 'Ofelia Lockless',
+  },
+];
+// window.localStorage.removeItem('bookdata');
 const AddBooks = document.getElementById('addBook-btn');
 
 let BookList = [];
@@ -55,7 +73,7 @@ AddBooks.addEventListener('click', () => {
 window.onload = () => {
   const bookl = JSON.parse(localStorage.getItem('bookdata' || '[]'));
   if (bookl === null) {
-    return;
+    localStorage.setItem('bookdata', JSON.stringify(initialData));
   }
   localStorage.setItem('bookdata', JSON.stringify(bookl));
   for (let i = 0; i < bookl.length; i += 1) {
