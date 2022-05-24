@@ -1,6 +1,6 @@
 /* eslint-disable max-classes-per-file */
 
-const AddBooks = document.getElementById('addBooks');
+const AddBooks = document.getElementById('addBook-btn');
 
 // class BookList {
 //   constructor() {
@@ -10,6 +10,7 @@ let BookList = [];
 
 function addbook(book) {
   // this.data.push(book);
+  BookList = JSON.parse(localStorage.getItem('bookdata' || '[]'));
   BookList.push(book);
   localStorage.setItem('bookdata', JSON.stringify(BookList || '[]'));
 }
@@ -57,18 +58,21 @@ function CreateUIBookList(bookOBJ) {
   BookListUi.appendChild(bookList);
 }
 
-AddBooks.addEventListener('submit', (e) => {
+AddBooks.addEventListener('click', () => {
   const newbook = getBook();
   addbook(newbook);
   CreateUIBookList(newbook);
-  e.preventDefault();
+  // e.preventDefault();
 });
 
 window.onload = () => {
-  const bookl = JSON.parse(localStorage.getItem('bookdata' || '[]'));
-  if (BookList === null) {
+  let bookl = JSON.parse(localStorage.getItem('bookdata' || '[]'));
+  if (bookl === null) {
+    bookl = [];
     return;
   }
   console.log(bookl);
-  BookList.foreach((book) => CreateUIBookList(book));
+  for (let i = 0; i < bookl.length; i += 1) {
+    CreateUIBookList(bookl[i]);
+  }
 };
