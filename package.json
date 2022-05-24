@@ -1,22 +1,22 @@
 {
-  "name": "capstone-module-1",
+  "name": "awesome-books",
   "version": "1.0.0",
-  "description": "",
+  "description": "Awesome books is a simple website that displays a list of books and allows you to add and remove books from that list",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hendridg/capstone-module-1.git"
-  },
-  "keywords": [],
+  "keywords": [
+    "Books",
+    "awesome",
+    "JavaScript",
+    "css",
+    "html",
+    "design",
+    "Microverse"
+  ],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hendridg/capstone-module-1/issues"
-  },
-  "homepage": "https://github.com/hendridg/capstone-module-1#readme",
+  "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
