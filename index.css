@@ -50,13 +50,18 @@ li {
   margin: 0 auto 20px auto;
 }
 
+.Contactinfo {
+  display: none;
+}
+
 .Bookcollection {
   display: grid;
   border: solid;
-  width: 50%;
+  width: 200%;
+  gap: -20px;
   text-align: center;
-  margin-left: 25%;
-  margin-top: -400px;
+  margin-left: -45%;
+  margin-top: 100px;
 }
 
 .list button {
@@ -78,12 +83,8 @@ li {
   margin-bottom: 20px;
 }
 
-.Contactinfo {
-  display: none;
-  width: 50%;
-  text-align: center;
-  margin-left: 25%;
-  margin-top: -300px;
+.contactlinks {
+  text-decoration: solid;
 }
 
 .contactlinks > li {
@@ -98,12 +99,6 @@ a {
   text-decoration: none;
   background-color: white;
   color: #000;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.contactlinks {
-  text-decoration: solid;
 }
 
 h1 {
@@ -113,13 +108,22 @@ h1 {
 
 .book-item {
   list-style-type: none;
-  margin-left: 1px;
-  margin-top: 10px;
-  width: 50px;
   display: flex;
+  margin: 1px;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 0.3rem;
+  padding: 0.5rem;
   background-color: rgb(168, 168, 168);
+}
+
+.book-item:nth-child(odd) {
+  background: rgb(246, 242, 242);
+}
+
+.allawesomebooks {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 400px;
 }
