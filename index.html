@@ -2,27 +2,82 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Awesome Books ">
-        <title>Awesome Books</title>
-        <link rel="stylesheet" href="index.css">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Awesome Books " />
+        <title id="title">Awesome Books</title>
+        <link rel="stylesheet" href="index.css" />
     </head>
 
     <body>
-        <header class="heading">
-            <h1>Awesome books</h1>
+
+        <header>
+            <div class="heading">
+                <h2 class="heading-title">Awesome books</h2>
+                <nav class="navbar">
+                    
+                       
+                            <a href="#" id="link" onclick="display('Bookcollection')">
+                                List
+                            </a>
+                        
+
+                            |
+
+                        
+                            <a href="#" id="newBook" onclick="display('addBooks')">
+                                Add New
+                            </a>
+                        
+
+                            |
+
+                        
+                            <a href="#" id="Contact" onclick="display('Contactinfo')">
+                                Contact
+                            </a>
+                       
+                </nav>
+            </div>
         </header>
-        <div class="Bookcollection" >
-            <ul id="Book-List"></ul>
-        </div>
-        <form class="addBooks" id="addBooks">
-            <input type="text" id="bookTitle" class="bookTitle" placeholder="Titile" required>
-            <input type="text" id="bookAuthor" class="bookAuthor" placeholder="Author" required>
-            <input type="submit" id="addBook-btn">
-        </form>
-        <script src="index.js" ></script>
+        <main>
+
+
+            <div id="Contactinfo" class="Contactinfo">
+                <h2>Contact Information</h2>
+                <p>
+                    If you have any questions or you just want to say "Hello".
+                    You can reach us to.
+                </p>
+                <ul class="contactlinks">
+                    <li>Our email: <a href="#">mail@mail.com</a></li>
+                    <li>Our twitter: <a href="#">@awesomeBooks</a></li>
+                    <li>Our github: <a href="#">@awesomeBooks</a></li>
+                </ul>
+            </div>
+
+            <div id="Bookcollection" class="Bookcollection">
+                <h2>All AwesomeBooks</h2>
+                    
+                <ul></ul>
+            </div>
+            <div id="addBooks" class="addBooks">
+                <form>
+                    <input type="text" id="bookTitle" class="bookTitle" placeholder="Titile" required />
+                    <input type="text" id="bookAuthor" class="bookAuthor" placeholder="Author" required />
+                    <input type="submit" id="addBook-btn" />
+                </form>
+            </div>
+
+        </main>
+        <footer>
+
+            <div class="heading">
+                <h2>Copyright &copy;</h2>
+            </div>
+        </footer>
+        <script src="index.js"></script>
     </body>
 
 </html>

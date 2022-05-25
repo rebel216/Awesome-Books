@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hendridg/capstone-module-1.git"
+    "url": "git+https://github.com/rebel216/Awesome-Books"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hendridg/capstone-module-1/issues"
+    "url": "https://github.com/rebel216/Awesome-Books"
   },
-  "homepage": "https://github.com/hendridg/capstone-module-1#readme",
+  "homepage": "https://github.com/rebel216/Awesome-Books",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
