@@ -1,6 +1,11 @@
 .heading {
+  border: 3px solid #000;
+  border-radius: 8px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 20px;
   text-align: center;
 }
 
@@ -24,18 +29,19 @@ li {
 .bookTitle .bookAuthor {
   justify-content: center;
   display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 20px;
 }
 
 .addBooks {
-  display: flex;
+  display: none;
   gap: 20px;
-  flex-direction: column;
   width: 100%;
   justify-content: center;
   align-items: center;
   place-items: center;
+  margin-top: -20%;
 }
 
 .booksList {
@@ -44,11 +50,17 @@ li {
   margin: 0 auto 20px auto;
 }
 
-.list {
-  display: flex;
-  justify-content: space-between;
-  justify-content: center;
-  padding: 20px;
+.Contactinfo {
+  display: none;
+}
+
+.Bookcollection {
+  display: grid;
+  border: solid;
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: -400px
 }
 
 .list button {
@@ -59,12 +71,56 @@ li {
   justify-content: center;
 }
 
-.list p {
+.navbar {
   display: flex;
-  height: 30%;
-  width: 30%;
-  justify-content: center;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+.heading-title {
   text-align: center;
-  margin-left: 30%;
-  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.Contactinfo {
+ display: none;
+ width: 50%;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: -300px
+}
+
+.contactlinks {
+  text-decoration: solid;
+}
+.contactlinks > li {
+  margin-right: 130px;
+ justify-content: left;
+  text-decoration:#000;
+  background-color: white;
+  color: rgb(225, 11, 11);
+}
+
+a {
+  text-decoration: none;
+  background-color: white;
+  color: #000;
+}
+
+h1 {
+  text-align: center;
+  margin-top: -40%;
+}
+
+.book-item {
+  list-style-type: none;
+  margin-left: 1px;
+  margin-top: 10px;
+  width: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0.3rem;
+  background-color: rgb(168, 168, 168);
 }
