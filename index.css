@@ -1,0 +1,126 @@
+.heading {
+  border: 3px solid #000;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+body {
+  height: 98vh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.bookTitle .bookAuthor {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.addBooks {
+  display: none;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  margin-top: -20%;
+}
+
+.booksList {
+  display: flex;
+  border-radius: 8px;
+  margin: 0 auto 20px auto;
+}
+
+.Contactinfo {
+  display: none;
+}
+
+.Bookcollection {
+  display: grid;
+  border: solid;
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: -400px
+}
+
+.list button {
+  margin-right: 30%;
+  margin-top: 15px;
+  width: 100px;
+  height: 40px;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+.heading-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Contactinfo {
+ display: none;
+ width: 50%;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: -300px
+}
+
+.contactlinks {
+  text-decoration: solid;
+}
+.contactlinks > li {
+  margin-right: 130px;
+ justify-content: left;
+  text-decoration:#000;
+  background-color: white;
+  color: rgb(225, 11, 11);
+}
+
+a {
+  text-decoration: none;
+  background-color: white;
+  color: #000;
+}
+
+h1 {
+  text-align: center;
+  margin-top: -40%;
+}
+
+.book-item {
+  list-style-type: none;
+  margin-left: 1px;
+  margin-top: 10px;
+  width: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0.3rem;
+  background-color: rgb(168, 168, 168);
+}
