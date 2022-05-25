@@ -105,6 +105,51 @@ a {
   text-decoration: none;
   background-color: white;
   color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Contactinfo {
+ display: none;
+ width: 50%;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: -300px
+}
+
+.contactlinks {
+  text-decoration: solid;
+}
+.contactlinks > li {
+  margin-right: 130px;
+ justify-content: left;
+  text-decoration:#000;
+  background-color: white;
+  color: rgb(225, 11, 11);
+}
+
+a {
+  text-decoration: none;
+  background-color: white;
+  color: #000;
+}
+
+h1 {
+  text-align: center;
+  margin-top: -40%;
+}
+
+.book-item {
+  list-style-type: none;
+  margin-left: 1px;
+  margin-top: 10px;
+  width: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0.3rem;
+  background-color: rgb(168, 168, 168);
 }
 
 h1 {
