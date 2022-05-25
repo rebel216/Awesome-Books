@@ -58,6 +58,22 @@ AddBooks.addEventListener('submit', (e) => {
   CreateUIBookList(newbook);
   document.getElementById('bookAuthor').value = '';
   document.getElementById('bookTitle').value = '';
+  const BookList = document.getElementById('Bookcollection');
+  const Form = document.getElementById('addBooks');
+  const Contact = document.getElementById('Contactinfo');
+  const heading = document.getElementById('title');
+  const linkAllBooks = document.getElementById('link');
+  const linkAddBook = document.getElementById('newBook');
+  const linkContact = document.getElementById('Contact');
+  const BookListheading = document.getElementById('allawesomebooks');
+  BookList.style.display = 'grid';
+  BookListheading.style.display = 'grid';
+  linkAllBooks.style.color = 'blue';
+  linkAddBook.style.color = 'black';
+  linkContact.style.color = 'black';
+  Form.style.display = 'none';
+  Contact.style.display = 'none';
+  heading.innerHTML = 'All Awesome Books';
   e.preventDefault();
 });
 
@@ -74,6 +90,7 @@ window.onload = () => {
 // eslint-disable-next-line no-unused-vars
 function display(section) {
   const BookList = document.getElementById('Bookcollection');
+  const BookListheading = document.getElementById('allawesomebooks');
   const Form = document.getElementById('addBooks');
   const Contact = document.getElementById('Contactinfo');
   const heading = document.getElementById('title');
@@ -84,6 +101,7 @@ function display(section) {
   switch (section) {
     case 'Bookcollection':
       BookList.style.display = 'grid';
+      BookListheading.style.display = 'grid';
       linkAllBooks.style.color = 'blue';
       linkAddBook.style.color = 'black';
       linkContact.style.color = 'black';
@@ -94,6 +112,7 @@ function display(section) {
 
     case 'addBooks':
       BookList.style.display = 'none';
+      BookListheading.style.display = 'none';
       Form.style.display = 'flex';
       linkAllBooks.style.color = 'black';
       linkAddBook.style.color = 'blue';
@@ -104,6 +123,7 @@ function display(section) {
 
     case 'Contactinfo':
       BookList.style.display = 'none';
+      BookListheading.style.display = 'none';
       Form.style.display = 'none';
       linkAllBooks.style.color = 'black';
       linkAddBook.style.color = 'black';
